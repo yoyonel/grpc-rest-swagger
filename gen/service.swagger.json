@@ -4,10 +4,6 @@
     "title": "service.proto",
     "version": "version not set"
   },
-  "schemes": [
-    "http",
-    "https"
-  ],
   "consumes": [
     "application/json"
   ],
@@ -17,28 +13,28 @@
   "paths": {
     "/v1/example/echo": {
       "post": {
-	"operationId": "Echo",
-	"responses": {
-	  "200": {
-	    "description": "",
-	    "schema": {
-	      "$ref": "#/definitions/exampleStringMessage"
-	    }
-	  }
-	},
-	"parameters": [
-	  {
-	    "name": "body",
-	    "in": "body",
-	    "required": true,
-	    "schema": {
-	      "$ref": "#/definitions/exampleStringMessage"
-	    }
-	  }
-	],
-	"tags": [
-	  "YourService"
-	]
+        "operationId": "Echo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/exampleStringMessage"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/exampleStringMessage"
+            }
+          }
+        ],
+        "tags": [
+          "YourService"
+        ]
       }
     }
   },
@@ -46,9 +42,9 @@
     "exampleStringMessage": {
       "type": "object",
       "properties": {
-	"value": {
-	  "type": "string"
-	}
+        "value": {
+          "type": "string"
+        }
       }
     }
   }

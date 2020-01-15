@@ -5,6 +5,8 @@ import service_pb2 as service__pb2
 
 
 class YourServiceStub(object):
+  # missing associated documentation comment in .proto file
+  pass
 
   def __init__(self, channel):
     """Constructor.
@@ -13,15 +15,19 @@ class YourServiceStub(object):
       channel: A grpc.Channel.
     """
     self.Echo = channel.unary_unary(
-	'/example.YourService/Echo',
-	request_serializer=service__pb2.StringMessage.SerializeToString,
-	response_deserializer=service__pb2.StringMessage.FromString,
-	)
+        '/example.YourService/Echo',
+        request_serializer=service__pb2.StringMessage.SerializeToString,
+        response_deserializer=service__pb2.StringMessage.FromString,
+        )
 
 
 class YourServiceServicer(object):
+  # missing associated documentation comment in .proto file
+  pass
 
   def Echo(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
@@ -30,9 +36,9 @@ class YourServiceServicer(object):
 def add_YourServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'Echo': grpc.unary_unary_rpc_method_handler(
-	  servicer.Echo,
-	  request_deserializer=service__pb2.StringMessage.FromString,
-	  response_serializer=service__pb2.StringMessage.SerializeToString,
+          servicer.Echo,
+          request_deserializer=service__pb2.StringMessage.FromString,
+          response_serializer=service__pb2.StringMessage.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
